@@ -66,7 +66,9 @@ public class VendingMachine {
 
     public int refund() {
         int refundAmount = Math.max(balance, 0);
-        return balance;
+        balance = 0;
+        return refundAmount;
+
     }
 
     public void resetVendingMachine() {

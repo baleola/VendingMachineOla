@@ -24,4 +24,14 @@ public class BalanceTest {
         int expected = vendingMachine.getBalance();
         assertEquals(actual,expected);
     }
+
+    @Test
+    void checkBalanceAfterRefund(){
+        VendingMachine vendingMachine = new VendingMachine(1,1,1);
+        vendingMachine.addMoney("quarter");
+        vendingMachine.refund();
+        int actual = 0;
+        int expected = vendingMachine.getBalance();
+        assertEquals(actual,expected);
+    }
 }
